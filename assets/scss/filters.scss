@@ -1,0 +1,130 @@
+
+.filters {
+    margin-top: 16px;
+    display: grid;
+    grid-row-gap: 8px;
+    grid-template-columns: min-content auto
+}
+
+.filters:not(.filters--mobile) {
+    padding: 24px 40px;
+    grid-column-gap: 32px;
+    background: rgba(var(--w-paper-bg-rgb), 1);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+}
+
+.filters--mobile {
+    grid-column-gap: 16px;
+}
+
+.filters__tab.filters__tab--mobile::-webkit-scrollbar {
+    display: none;
+}
+
+.filters__label {
+    font-size: 14px;
+    color: var(--w-emphasis-color);
+    line-height: 38px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.filters__label--mobile {
+    font-weight: 700;
+    color: var(--w-emphasis-color);
+    line-height: 32px;
+}
+
+.filters__tab {
+    flex-wrap: wrap;
+}
+
+.filters__tab.wstar-tab .wstar-tab__item {
+    font-size: .85rem;
+    position: relative;
+    margin: 5px 16px 5px 0
+}
+
+.filters__tab.wstar-tab .wstar-tab__item:last-child {
+    margin-right: 0
+}
+
+.filters__tab.wstar-tab .wstar-tab__item:after {
+    content: "";
+    padding: 5px 8px;
+    box-sizing: content-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%
+}
+
+@media (hover: hover) {
+    .filters__tab.wstar-tab .wstar-tab__item:hover {
+        background-color: rgba(76, 147, 255, .05);
+        border-radius: 4px
+    }
+}
+
+.filters__tab.filters__tab--mobile {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+.filters__tab.filters__tab--mobile:after {
+    padding: 4px
+}
+
+.filters__tab.filters__tab--mobile::-webkit-scrollbar {
+    display: none
+}
+
+.filters__tab.filters__tab--mobile .wstar-tab__item {
+    margin: 0 8px 0 0;
+    padding: 8px 16px;
+    color: rgba(var(--w-emphasis-color-rgb), .8);
+}
+
+.filters__tab.filters__tab--mobile .wstar-tab__item:last-child {
+    margin-right: 0
+}
+
+.filters__tab.filters__tab--mobile .wstar-tab__item.active {
+    color: var(--w-primary)
+}
+
+.wstar-tab {
+    position: relative;
+    display: flex
+}
+
+.wstar-tab__item {
+    position: relative;
+    margin-right: var(--10620a1a);
+    white-space: nowrap;
+    transition: all .2s;
+    cursor: pointer
+}
+
+.wstar-tab__item:last-of-type {
+    margin-right: 0
+}
+
+.wstar-tab--solid .wstar-tab__item {
+    padding: 6px 12px;
+    font-size: .75rem;
+    color: var(--w-body-color);
+    line-height: 16px;
+    font-weight: 400
+}
+
+.wstar-tab--solid .wstar-tab__item.active {
+    font-weight: 700;
+    color: var(--w-primary);
+    background-color: rgba(var(--w-primary-rgb), .1);
+    border-radius: 4px
+}

@@ -1,0 +1,18 @@
+.wrapper .footer {
+    --w-footer-min-height: 3rem;
+    --w-footer-padding-x: 1rem;
+    --w-footer-padding-y: 0.5rem;
+    --w-footer-color: var(--w-body-color);
+    --w-footer-border-color: var(--w-border-color);
+    --w-footer-border: var(--w-border-width) solid var(--w-footer-border-color);
+    --w-footer-bg: var(--w-tertiary-bg);
+    align-items: center;
+    border-top: var(--w-footer-border);
+    background: var(--w-footer-bg);
+    color: var(--w-footer-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: var(--w-footer-min-height);
+    padding: var(--w-footer-padding-y) var(--w-footer-padding-x);
+}

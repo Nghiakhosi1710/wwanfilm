@@ -1,0 +1,136 @@
+.header-notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header-notification-icon {
+    background: rgba(var(--w-body-color-rgb), 0.1);
+    color: var(--w-body-color);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 20px;
+}
+
+.header-notification-icon:hover {
+    background: rgba(var(--w-body-color-rgb), 0.2);
+    cursor: pointer;
+}
+
+.header-notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--w-red);
+    color: var(--w-body-color);
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.675rem;
+    border-radius: 50%;
+}
+.dropdown-notification-menu {
+    width: 300px;
+    max-height: 400px;
+    padding: 10px;
+}
+
+
+.dropdown-notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.dropdown-notification-header .dropdown-notification-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--w-body-color);
+}
+.dropdown-notification-header .dropdown-notification-clear {
+    font-size: 0.9rem;
+    color: var(--w-red);
+    cursor: pointer;
+}
+
+.dropdown-notification-header .dropdown-notification-clear:hover {
+    text-decoration: underline;
+}
+.dropdown-notification-header .dropdown-notification-clear:active {
+    color: var(--w-danger-text-emphasis);
+}
+.dropdown-notification-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dropdown-notification-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(var(--w-body-color-rgb), 0.1);
+}
+.dropdown-notification-menu {
+    &.show {
+        display: block;
+    }
+
+    .dropdown-notification-header {
+        .dropdown-notification-title {
+            font-weight: 600;
+        }
+        .dropdown-notification-clear {
+            font-size: 0.8rem;
+            color: var(--bs-primary);
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+            &:disabled {
+                color: var(--bs-secondary);
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .notification-item {
+        white-space: normal; // Cho phép xuống dòng
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--bs-light);
+        }
+
+        &.unread {
+            background-color: var(--bs-primary-bg-subtle); // Màu nền cho unread (tùy theme)
+            // Hoặc
+            // background-color: rgba(var(--bs-primary-rgb), 0.08);
+        }
+        &.read {
+            opacity: 0.75;
+        }
+
+        .notification-item-content {
+            p {
+                line-height: 1.3;
+            }
+            small {
+                font-size: 0.75rem;
+            }
+        }
+        .avatar {
+            width: 32px;
+            height: 32px;
+            font-size: 0.8rem; // Cho icon user fallback
+        }
+    }
+}

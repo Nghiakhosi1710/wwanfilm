@@ -1,0 +1,99 @@
+.card-section {
+    .section-title {
+        margin-bottom: 4px;
+        height: 38px;
+    }
+    
+    .section-title__text {
+        line-height: 38px
+    }
+    .section-list {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-auto-rows: 0;
+        overflow: visible;
+
+        &__multi {
+            grid-auto-rows: auto;
+        }
+
+        &__item {
+            margin-bottom: 16px;
+        }
+    }
+    &:not(.card-section--mobile) .section-title{
+        margin-bottom: 16px;
+    }
+    &:not(.card-section--mobile):not(.card-section--single) {
+        margin-bottom: 48px;
+    }
+}
+
+.card-section--mobile {
+    margin: 0 16px 24px
+}
+.section__list--row:not(.card-section--mobile--single) {
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 8px
+}
+
+.card-section--mobile.card-section--single {
+    margin: 0 0 24px
+}
+
+.card-section--mobile.card-section--single .section-title {
+    margin: 0 16px
+}
+@media (max-width: 412px) {
+    .card-section:not(.card-section--mobile) .section-list:not(.section-list__single) {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.5px) {
+    .card-section .section-list:not(.section-list__single) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 8px
+    }
+}
+
+@media (min-width: 768px) {
+    .card-section:not(.card-section--mobile) .section-list:not(.section-list__single) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 16px
+    }
+}
+
+@media (min-width: 992px) {
+    .card-section:not(.card-section--mobile) .section-list:not(.section-list__single) {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+@media (min-width: 1280px) {
+    .card-section:not(.card-section--mobile) .section-list:not(.section-list__single) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 24px
+    }
+
+    .card-section:not(.card-section--mobile) .section-list:not(.section-list--single) .section-list__item {
+        margin-bottom: 24px
+    }
+}
+
+@media (min-width: 1770px) {
+    .card-section:not(.card-section--mobile) .section-list:not(.section-list__single) {
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 24px
+    }
+
+    .card-section:not(.card-section--mobile) .section-list:not(.section-list--single) .section-list__item {
+        margin-bottom: 24px
+    }
+}
+@media (min-width: 2040px) {
+    .card-section:not(.card-section--mobile) .section-list:not(.section-list__single) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-column-gap: 24px
+    }
+}

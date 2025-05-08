@@ -1,0 +1,48 @@
+.lien-he {
+    padding: 20px;
+    background-color: var(--w-menu-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.lien-he h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.lien-he p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.lien-he form {
+    margin-top: 20px;
+}
+
+.lien-he label {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.lien-he input,
+.lien-he textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.lien-he button[type="submit"] {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lien-he button[type="submit"]:hover {
+    background-color: #23527c;
+}

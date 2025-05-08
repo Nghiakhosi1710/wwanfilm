@@ -1,0 +1,64 @@
+.chinh-sach-bao-mat {
+  padding: 20px;
+  background-color: var(--w-menu-bg);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chinh-sach-bao-mat h1 {
+  font-size: 28px;
+  color: #d9534f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chinh-sach-bao-mat h2 {
+  font-size: 22px;
+  color: #0275d8;
+  margin-top: 20px;
+}
+
+.chinh-sach-bao-mat p {
+  font-size: 16px;
+  color: var(--w-body-color);
+  line-height: 1.6;
+}
+
+.chinh-sach-bao-mat ul {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.chinh-sach-bao-mat li {
+  font-size: 16px;
+  color: var(--w-body-color);
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.chinh-sach-bao-mat li::before {
+  content: "🔒";
+  color: #28a745;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.chinh-sach-bao-mat a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.chinh-sach-bao-mat a:hover {
+  color: #23527c;
+}
+
+.updated-date {
+  font-size: 14px;
+  font-style: italic;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
